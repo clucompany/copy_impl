@@ -1,6 +1,5 @@
 
-#![allow(non_snake_case)]
-//Copyright 2021 #UlinProject Denis Kotlyarov (Денис Котляров)
+//Copyright 2022 #UlinProject Denis Kotlyarov (Денис Котляров)
 
 //Licensed under the Apache License, Version 2.0 (the "License");
 //you may not use this file except in compliance with the License.
@@ -14,212 +13,135 @@
 //See the License for the specific language governing permissions and
 // limitations under the License.
 
-//#Ulin Project 2021
+//#Ulin Project 2022
 /*!
 
 
 */
 
+#![allow(non_snake_case)]
 #![no_std]
 
-#[macro_export]
-macro_rules! code_copy {
-	[
-		$(
-			[ // MRESULT
-				$($result:tt)*
-			]
-			[ // MDATA_ARRAY
-				[	$($impls_data:tt)*				]
-				[	$($code_block:tt)*				]
-			]
-		)?
-		
-		impl [$($impls_ident:tt)*]:
-		
-		$($all:tt)*
-	] => {
-		$crate::code_copy! {
-			[
-				$($($result)*)?
-			]
-			[
-				[ // IMPLS DATA
-					$($($impls_data)*)?
-					[ // impl data
-						[ ]
-						[ $($impls_ident)* ]
-					]
-				]
-				[	$($($code_block)*)? ]
-			]
-			
-			$($all)*
-		}
-	};
-	[
-		$(
-			[ // MRESULT
-				$($result:tt)*
-			]
-			[ // MDATA_ARRAY
-				[	$($impls_data:tt)*				]
-				[	$($code_block:tt)*				]
-			]
-		)?
-		
-		impl [$($prefix:tt)*] [$($impls_ident:tt)*]:
-		
-		$($all:tt)*
-	] => {
-		$crate::code_copy! {
-			[
-				$($($result)*)?
-			]
-			[
-				[ // IMPLS DATA
-					$($($impls_data)*)?
-					
-					[ // ADD impl data
-						[ $($prefix)* ]
-						[ $($impls_ident)* ]
-					]
-				]
-				[	$($($code_block)*)?	]
-			]
-			
-			$($all)*
-		}
-	};
-	
-	[
-		$(
-			[ // MRESULT
-				$($result:tt)*
-			]
-			[ // MDATA_ARRAY
-				[	$($impls_data:tt)*				]
-				[	$($code_block:tt)*				]
-			]
-		)?
-		
-		@code {
-			$($code:tt)*
-		}
-		$($all:tt)*
-	] => {
-		$crate::code_copy! {
-			[ // MRESULT
-				$($($result)*)?
-				[
-					[	$($($impls_data)*)?				]
-					[
-						$($($code_block)*)?
-						$($code)*
-					]
-				]
-			]
-			[ // MDATA_ARRAY
-				[][]
-			]
-			
-			$($all)*
-		}
-	};
 
-	
-	[ // FULL_END
-		[ // MRESULT
-			$(
-				[
-					[	$($all_impls:tt)*				]
-					[	$($code_block:tt)*				]
-				]
-			)*
-		]
-		[ // MDATA_ARRAY
-			[][]
-		]
-	] => {
-		$crate::__code_copy! {
-			$([
-				[	$($all_impls)*				]
-				[	$($code_block)*			]
-			])*
-		}
-	};
-	
-	[ // FULL_END, EMPTY
-		[ // MRESULT
-		]
-		[ // MDATA_ARRAY
-			[][]
-		]
-	] => {
-		
-	};
-	
-	[ // UNKNOWN
-		$(
-			[ // MRESULT
-				$($result:tt)*
-			]
-			[ // MDATA_ARRAY
-				$($all0:tt)*
-			]
-		)?
+#[macro_export]
+macro_rules! copy_impl {
+	[ /* START */
+		impl $(<$($p_impl:tt)*>)? ($($impl:tt)*) $(where ($($where:tt)*))?
 		
 		$($all:tt)*
 	] => {
-		compile_error!(
-			concat!(
-				"Unknown syntax, ",
-				stringify!($($all)*)
-			)
-		);
+		$crate::copy_impl! {
+			[
+				[
+					/* IMPL_ARRAY */
+					[ [$($($p_impl)*)?][$($impl)*][$($($where)*)?] ]
+					/* all */
+				]
+			]
+			
+			$($all)*
+		}
 	};
+	
+	[ /* CONTINUE */
+		[
+			[
+				/* IMPL_ARRAY */
+				$($all_impl_array:tt)+
+			]
+		]
+		
+		+ impl $(<$($p_impl:tt)*>)? ($($impl:tt)*) $(where ($($where:tt)*))?
+		
+		$($all:tt)*
+	] => {
+		$crate::copy_impl! {
+			[
+				[
+					/* IMPL_ARRAY */
+					$($all_impl_array)+
+					
+					[ [$($($p_impl)*)?][$($impl)*][$($($where)*)?] ]
+					/* all */
+				]
+			]
+			
+			$($all)*
+		}
+	};
+	
+	[
+		[
+			[ /* IMPL_ARRAY */
+				$([
+					[$($p_impl:tt)*][$($impl:tt)*][$($where:tt)*]
+				])+
+			]
+		]
+		{ $($code:tt)* }
+		
+		$(
+			; $($all:tt)*
+		)?
+	] => {
+		$crate::__internal_make_copy_impl! {
+			[]
+			[$($code)*] ->
+			
+			$([
+				[$($p_impl)*][$($impl)*][$($where)*]
+			])+
+		}
+		
+		$(
+			$crate::copy_impl! {
+				$($all)*
+			}
+		)?
+	};
+	
+	[] => {};
+	
+	[ /* UNK */ $($all:tt)+ ] => {
+		compile_error!(stringify!(
+			$($all)+
+		));
+	}
 }
 
 #[macro_export]
-macro_rules! __code_copy {
+#[doc(hidden)]
+macro_rules! __internal_make_copy_impl {
 	[
-		$([
-			[
-				[
-					[  $($impl_prefix:tt)*	]
-					[ $($impl_ident:tt)*		]
-				]
-				
-				$($all_impls:tt)*
-			]
-			[	$($code_block:tt)*				]
-		])*
-	] => {
-		$(
-			impl < $($impl_prefix)* > $($impl_ident)* {
-				$($code_block)*
-			}
-		)*
+		[
+			/* RARRAY */
+			$($rarray:tt)*
+		]
+		[$($code:tt)*] ->
 		
-		$crate::__code_copy! {
-			$([
-				[	$($all_impls)*				]
-				[	$($code_block)*			] // copy tree (tt)
-			])*
+		[ [$($p_impl:tt)*][$($impl:tt)*][$($where:tt)*] ]
+		$($unk:tt)*
+	] => {
+		$crate::__internal_make_copy_impl! {
+			[
+				$($rarray)*
+				[ [$($p_impl)*][$($impl)*][$($where)*][$($code)*] ]
+			]
+			[$($code)*] ->
+			
+			$($unk)*
 		}
 	};
-	
 	[
-		$([
-			[]
-			[	$($code_block:tt)*				]
-		])*
+		[
+			$([ [$($p_impl:tt)*][$($impl:tt)*][$($where:tt)*][$($code:tt)*] ])*
+		]
+		[$($_code:tt)*] ->
 	] => {
-		
-	};
-	
-	[
-		[]
-	] => {};
-	[] => {};
+		$(
+			impl $(<$($p_impl)*>)? $($impl)* $(where $($where)*)? {
+				$($code)*
+			}
+		)*
+	}
 }

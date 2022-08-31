@@ -1,8 +1,8 @@
 [package]
-name = "code_copy"
-version = "0.1.2"
+name = "copy_impl"
+version = "0.2.0"
 authors = ["Denis Kotlyarov (Денис Котляров) <denis2005991@gmail.com>"]
-repository = "https://github.com/clucompany/CopyCode.git"
+repository = "https://github.com/clucompany/copy_impl.git"
 edition = "2021"
 
 license = "Apache-2.0"
