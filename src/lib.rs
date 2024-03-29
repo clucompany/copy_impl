@@ -91,17 +91,23 @@ fn main() -> Result<(), Box<dyn Error>> {
 ///
 /// Macro for easily copying impl block code for different types.
 /// ```rust
+/// use std::{error::Error, fmt::Write};
+/// use copy_impl::copy_impl;
+/// 
+/// struct CustomNum<T>(T);
+/// struct UncheckedCustomNum<T>(T);
+/// 
 /// copy_impl! {
-///	impl (CustomNum<i8>),
-///	impl (CustomNum<i16>),
-///	impl (CustomNum<i32>),
-///	impl (UncheckedCustomNum<i8>),
-///	impl (UncheckedCustomNum<i16>) {
-///		pub fn write_to(&self, mut w: impl Write) -> Result<(), std::fmt::Error> {
-///			write!(w, "{}", self.0)
-///		}
-///	}
-///}
+/// 	impl (CustomNum<i8>),
+/// 	impl (CustomNum<i16>),
+/// 	impl (CustomNum<i32>),
+/// 	impl (UncheckedCustomNum<i8>),
+/// 	impl (UncheckedCustomNum<i16>) {
+/// 		pub fn write_to(&self, mut w: impl Write) -> Result<(), std::fmt::Error> {
+/// 			write!(w, "{}", self.0)
+/// 		}
+/// 	}
+/// }
 /// ```
 #[macro_export]
 macro_rules! copy_impl {
