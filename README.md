@@ -93,7 +93,7 @@ This project has a dual license according to (LICENSE-MIT) and (LICENSE-APACHE-2
     <img align="left" src="https://github.com/UlinProject/img/blob/main/block_450_220/uproject.png" alt="uproject" style="height: 100px; width: 220px;"/>
   </a>
   
-  <b>Copyright (c) 2024 #UlinProject (Denis Kotlyarov).</b>
+  <b>Copyright (c) 2021-2024 #UlinProject (Denis Kotlyarov).</b>
   </br></br></br></br>
 </div>
 
