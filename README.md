@@ -86,6 +86,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 </a>
 
 ## License:
+This project has a dual license according to (LICENSE-MIT) and (LICENSE-APACHE-2-0).
 
 <div align="left">
   <a href="https://github.com/denisandroid">
@@ -96,7 +97,7 @@ fn main() -> Result<(), Box<dyn Error>> {
   </br></br></br></br>
 </div>
 
-### 1.0, Apache License:
+### Apache License:
 <div align="left">
   <a href="https://www.apache.org/licenses/LICENSE-2.0">
     <img align="left" src="https://github.com/UlinProject/img/blob/main/block_450_220/apache2.png" alt="apache2" style="height: 100px; width: 220px;"/>
@@ -106,7 +107,7 @@ fn main() -> Result<(), Box<dyn Error>> {
   </br></br></br></br>
 </div>
 
-### 2.0, MIT License:
+### MIT License:
 <div align="left">
   <a href="https://mit-license.org/">
     <img align="left" src="https://github.com/UlinProject/img/blob/main/block_450_220/mit.png" alt="mit" style="height: 100px; width: 220px;"/>
