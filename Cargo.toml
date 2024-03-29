@@ -8,8 +8,8 @@ homepage = "https://crates.io/crates/include_tt"
 license = "MIT/Apache-2.0"
 readme = "README.md"
 
-description = "Macro for easily copying impl block code for different types."
-keywords = ["copy_impl", "macros", "code-transformation", "clucompany"]
+description = "Macro for effortlessly duplicating impl block code across various types in Rust."
+keywords = ["copy_impl", "macro", "code-transformation", "clucompany"]
 categories = ["development-tools", "development-tools::build-utils"]
 
 [dependencies]
