@@ -37,7 +37,7 @@ Add this to your Cargo.toml:
 
 ```toml
 [dependencies]
-copy_impl = "0.3.0"
+copy_impl = "0.3.1"
 ```
 
 and this to your source code:
