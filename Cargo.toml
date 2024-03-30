@@ -4,7 +4,7 @@ version = "0.3.2"
 edition = "2021"
 authors = ["Denis Kotlyarov (Денис Котляров) <denis2005991@gmail.com>"]
 repository = "https://github.com/clucompany/copy_impl.git"
-homepage = "https://crates.io/crates/copy_impl"
+homepage = "https://github.com/clucompany/copy_impl.git"
 license = "MIT/Apache-2.0"
 readme = "README.md"
 
