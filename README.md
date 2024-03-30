@@ -7,22 +7,22 @@
 
 <div id="badges">
   <a href="./LICENSE-MIT">
-    <img src="https://github.com/UlinProject/img/blob/main/short_70/mit.png" alt="mit" style="height: 32px; max-width: 100%;"/>
+    <img src="https://github.com/UlinProject/img/blob/main/short_70/mit.png?raw=true" alt="mit" style="height: 32px; max-width: 100%;"/>
   </a>
   <a href="./LICENSE-APACHE">
-    <img src="https://github.com/UlinProject/img/blob/main/short_70/apache2.png" alt="apache2" style="height: 32px; max-width: 100%;"/>
+    <img src="https://github.com/UlinProject/img/blob/main/short_70/apache2.png?raw=true" alt="apache2" style="height: 32px; max-width: 100%;"/>
   </a>
   <a href="https://crates.io/copy_impl">
-    <img src="https://github.com/UlinProject/img/blob/main/short_70/cratesio.png" alt="cratesio" style="height: 32px; max-width: 100%;"/>
+    <img src="https://github.com/UlinProject/img/blob/main/short_70/cratesio.png?raw=true" alt="cratesio" style="height: 32px; max-width: 100%;"/>
   </a>
   <a href="https://doc.rs/copy_impl">
-    <img src="https://github.com/UlinProject/img/blob/main/short_70/docrs.png" alt="docrs" style="height: 32px; max-width: 100%;"/>
+    <img src="https://github.com/UlinProject/img/blob/main/short_70/docrs.png?raw=true" alt="docrs" style="height: 32px; max-width: 100%;"/>
   </a>
   <a href="https://github.com/denisandroid">
-    <img src="https://github.com/UlinProject/img/blob/main/short_70/uproject.png" alt="uproject" style="height: 32px; max-width: 100%;"/>
+    <img src="https://github.com/UlinProject/img/blob/main/short_70/uproject.png?raw=true" alt="uproject" style="height: 32px; max-width: 100%;"/>
   </a>
   <a href="https://github.com/clucompany">
-    <img src="https://github.com/UlinProject/img/blob/main/short_70/clulab.png" alt="clulab" style="height: 32px; max-width: 100%;"/>
+    <img src="https://github.com/UlinProject/img/blob/main/short_70/clulab.png?raw=true" alt="clulab" style="height: 32px; max-width: 100%;"/>
   </a>
 	
   [![CI](https://github.com/clucompany/copy_impl/actions/workflows/CI.yml/badge.svg?event=push)](https://github.com/clucompany/copy_impl/actions/workflows/CI.yml) 
@@ -97,7 +97,7 @@ This project has a dual license according to (LICENSE-MIT) and (LICENSE-APACHE-2
 
 <div align="left">
   <a href="https://github.com/denisandroid">
-    <img align="left" src="https://github.com/UlinProject/img/blob/main/block_450_220/uproject.png" alt="uproject" style="height: 100px; width: 220px;"/>
+    <img align="left" src="https://github.com/UlinProject/img/blob/main/block_450_220/uproject.png?raw=true" alt="uproject" style="height: 100px; width: 220px;"/>
   </a>
   
   <b>Copyright (c) 2021-2024 #UlinProject (Denis Kotlyarov).</b>
@@ -107,7 +107,7 @@ This project has a dual license according to (LICENSE-MIT) and (LICENSE-APACHE-2
 ### Apache License:
 <div align="left">
   <a href="https://www.apache.org/licenses/LICENSE-2.0">
-    <img align="left" src="https://github.com/UlinProject/img/blob/main/block_450_220/apache2.png" alt="apache2" style="height: 100px; width: 220px;"/>
+    <img align="left" src="https://github.com/UlinProject/img/blob/main/block_450_220/apache2.png?raw=true" alt="apache2" style="height: 100px; width: 220px;"/>
   </a>
   
   <b>Licensed under the Apache License, Version 2.0.</b>
@@ -117,7 +117,7 @@ This project has a dual license according to (LICENSE-MIT) and (LICENSE-APACHE-2
 ### MIT License:
 <div align="left">
   <a href="https://mit-license.org/">
-    <img align="left" src="https://github.com/UlinProject/img/blob/main/block_450_220/mit.png" alt="mit" style="height: 100px; width: 220px;"/>
+    <img align="left" src="https://github.com/UlinProject/img/blob/main/block_450_220/mit.png?raw=true" alt="mit" style="height: 100px; width: 220px;"/>
   </a>
   
   <b>Licensed under the MIT License.</b>
