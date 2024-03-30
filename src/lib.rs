@@ -46,7 +46,6 @@ use std::{error::Error, fmt::Write};
 use copy_impl::copy_impl;
 
 struct CustomNum<T>(T);
-
 struct UncheckedCustomNum<T>(T);
 
 copy_impl! {
@@ -85,7 +84,6 @@ fn main() -> Result<(), Box<dyn Error>> {
 
 */
 
-#![allow(non_snake_case)]
 #![no_std]
 
 ///

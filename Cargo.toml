@@ -9,7 +9,7 @@ license = "MIT/Apache-2.0"
 readme = "README.md"
 
 description = "Macro for effortlessly duplicating impl block code across various types in Rust."
-keywords = ["copy_impl", "macro", "code-transformation", "clucompany"]
-categories = ["development-tools", "development-tools::build-utils"]
+keywords = ["copy_impl", "macro", "code-transformation", "no_std", "clucompany"]
+categories = ["development-tools"]
 
 [dependencies]
