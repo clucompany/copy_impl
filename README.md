@@ -4,6 +4,7 @@
   
   (Macro for effortlessly duplicating impl block code across various types in Rust.)
   </br></br>
+
 <div id="badges">
   <a href="./LICENSE-MIT">
     <img src="https://github.com/UlinProject/img/blob/main/short_70/mit.png" alt="mit" style="height: 32px; max-width: 100%;"/>
@@ -20,6 +21,10 @@
   <a href="https://github.com/clucompany">
     <img src="https://github.com/UlinProject/img/blob/main/short_70/clulab.png" alt="clulab" style="height: 32px; max-width: 100%;"/>
   </a>
+	
+  [![CI](https://github.com/clucompany/copy_impl/actions/workflows/CI.yml/badge.svg?event=push)](https://github.com/clucompany/include_tt/actions/workflows/CI.yml) 
+
+
 </div>
 </div>
 
