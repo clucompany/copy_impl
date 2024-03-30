@@ -25,7 +25,7 @@
     <img src="https://github.com/UlinProject/img/blob/main/short_70/clulab.png" alt="clulab" style="height: 32px; max-width: 100%;"/>
   </a>
 	
-  [![CI](https://github.com/clucompany/copy_impl/actions/workflows/CI.yml/badge.svg?event=push)](https://github.com/clucompany/include_tt/actions/workflows/CI.yml) 
+  [![CI](https://github.com/clucompany/copy_impl/actions/workflows/CI.yml/badge.svg?event=push)](https://github.com/clucompany/copy_impl/actions/workflows/CI.yml) 
 
 
 </div>
