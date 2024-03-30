@@ -15,6 +15,9 @@
   <a href="https://crates.io/copy_impl">
     <img src="https://github.com/UlinProject/img/blob/main/short_70/cratesio.png" alt="cratesio" style="height: 32px; max-width: 100%;"/>
   </a>
+  <a href="https://doc.rs/copy_impl">
+    <img src="https://github.com/UlinProject/img/blob/main/short_70/docrs.png" alt="docrs" style="height: 32px; max-width: 100%;"/>
+  </a>
   <a href="https://github.com/denisandroid">
     <img src="https://github.com/UlinProject/img/blob/main/short_70/uproject.png" alt="uproject" style="height: 32px; max-width: 100%;"/>
   </a>
