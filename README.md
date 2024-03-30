@@ -109,7 +109,6 @@ This project has a dual license according to (LICENSE-MIT) and (LICENSE-APACHE-2
   <a href="https://www.apache.org/licenses/LICENSE-2.0">
     <img align="left" src="https://github.com/UlinProject/img/blob/main/block_220_100/apache2.png?raw=true" alt="apache2"/>
   </a>
-  
   <b>Licensed under the Apache License, Version 2.0.</b>
   </br></br></br></br>
 </div>
@@ -117,9 +116,8 @@ This project has a dual license according to (LICENSE-MIT) and (LICENSE-APACHE-2
 ### MIT License:
 <div align="left">
   <a href="https://mit-license.org/">
-    <img align="left" src="https://github.com/UlinProject/img/blob/main/block_220_100/mit.png?raw=true" alt="mit"/>
+    <img align="left" src="https://github.com/UlinProject/img/blob/main/block_220_100/mit.png?raw=true" alt="mit" />
   </a>
-  
   <b>Licensed under the MIT License.</b>
   </br></br></br></br>
 </div>
