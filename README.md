@@ -12,7 +12,7 @@
   <a href="./LICENSE_APACHE">
     <img src="https://github.com/UlinProject/img/blob/main/short_32/apache2.png?raw=true" alt="apache2"/>
   </a>
-  <a href="https://crates.io/copy_impl">
+  <a href="https://crates.io/crates/copy_impl">
     <img src="https://github.com/UlinProject/img/blob/main/short_32/cratesio.png?raw=true" alt="cratesio"/>
   </a>
   <a href="https://docs.rs/copy_impl">
