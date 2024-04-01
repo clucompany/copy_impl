@@ -99,8 +99,10 @@ This project has a dual license according to (LICENSE-MIT) and (LICENSE-APACHE-2
   <a href="https://github.com/denisandroid">
     <img align="left" src="https://github.com/UlinProject/img/blob/main/block_220_100/uproject.png?raw=true" alt="uproject"/>
   </a>
-  <b>&nbsp;Copyright (c) 2021-2024 #UlinProject (Denis Kotlyarov).</b>
-  </br></br></br></br>
+  <b>&nbsp;Copyright (c) 2021-2024 #UlinProject</b>
+	
+  <b>&nbsp;(Denis Kotlyarov).</b>
+  </br></br></br>
 </div>
 
 ### Apache License:
