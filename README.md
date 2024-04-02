@@ -88,7 +88,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 }
 ```
 
-<a href="https://github.com/clucompany/copy_impl/tree/master/examples">
+<a href="./examples">
   See all
 </a>
 
@@ -107,7 +107,7 @@ This project has a dual license according to (LICENSE-MIT) and (LICENSE-APACHE-2
 
 ### Apache License:
 <div align="left">
-  <a href="https://www.apache.org/licenses/LICENSE-2.0">
+  <a href="./LICENSE_APACHE">
     <img align="left" src="https://github.com/UlinProject/img/blob/main/block_220_100/apache2.png?raw=true" alt="apache2"/>
     
   </a>
@@ -117,7 +117,7 @@ This project has a dual license according to (LICENSE-MIT) and (LICENSE-APACHE-2
 
 ### MIT License:
 <div align="left">
-  <a href="https://mit-license.org/">
+  <a href="./LICENSE_MIT">
     <img align="left" src="https://github.com/UlinProject/img/blob/main/block_220_100/mit.png?raw=true" alt="mit"/>
   </a>
   <b>&nbsp;Licensed under the MIT License.</b>
